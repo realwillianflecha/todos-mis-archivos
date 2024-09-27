@@ -4,8 +4,9 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-/** Globales **/
 
+
+/** Globales **/
 a {
     text-decoration: none;
     color: #000;
@@ -13,6 +14,10 @@ a {
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
+}
+img {
+    width: 100%;
+    display: block;
 }
 
 /** Header y Navegacion **/
@@ -40,7 +45,23 @@ a {
     height: 550px;
 }
 
+/** Categorias **/
+.categorias h2 {
+        text-align: center;
+}
+.categorias a {
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+}
+.categorias a:hover {
+    background-color: #037bc0;
+    color: #ffff;
+    border-bottom-right-radius: 10px ;
+}
 .listado-categorias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
