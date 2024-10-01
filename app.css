@@ -9,6 +9,7 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
+    line-height: 2;
 }
 /** Globales **/
 h1, h2, h3 {
@@ -142,6 +143,13 @@ img {
 .producto:nth-child(1) img {
     height: 43rem;
     width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
 }
 .producto:nth-child(2) { 
     grid-column-start: 1;
@@ -181,4 +189,21 @@ img {
 .texto-producto .precio {
     font-size: 2.8rem;
     font-weight: 900;
+}
+
+/** Footer **/
+.listado-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4rem 0;
+}
+.enlace-footer a {
+    display: block;
+}
+.text-align-footer {
+    text-align: center;
+}
+.contenedor-nav-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
 }
