@@ -86,11 +86,15 @@
         </div>
 
         <h2>Imágenes Responsive</h2>
-        <img src="img/imagen.avif" alt="imagen responsive" >
+        <!-- <img src="img/imagen.avif" alt="imagen responsive" > -->
 
         <h2>Formatos Modernos</h2>
 
-
+        <picture>
+            <source srcset="img/imagen.avif" type="image/avif" />
+            <source srcset="img/imagen.webp">
+            <img loading="lazy" src="jpg" alt="imagen">
+        </picture>
 
         <h2>Formatos Modernos con SRC SET</h2>
 
