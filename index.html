@@ -2,103 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Design</title>
+    <title>TechPRO Audifonos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/01.css"> -->
-    <!-- <link rel="stylesheet" href="css/02.css"> -->
-    <!-- <link rel="stylesheet" href="css/03.css"> -->
-    <!-- <link rel="stylesheet" href="css/04.css"> -->
-    <!-- <link rel="stylesheet" href="css/05.css"> -->
-    <!-- <link rel="stylesheet" href="css/06.css"> -->
-    <!-- <link rel="stylesheet" href="css/07.css"> -->
-    <!-- <link rel="stylesheet" href="css/08.css"> -->
-    <!-- <link rel="stylesheet" href="css/09.css"> -->
-    <link rel="stylesheet" href="css/10.css">   
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <div class="imagen-header">
+                <picture>
+                    <source 
+                        sizes="1920w"
+                        srcset="img/header.avif 1920w" 
+                        type="image/avif">
+                    <source 
+                        sizes="1920w" 
+                        srcset="img/header.webp 1920w" 
+                        type="image/webp">
+                    <img loading="lazy" decoding="async" src="img/header.jpg" 
+                    lazyalt="imagen" width="1000" height="500">
+                </picture>
+            </div> <!-- .imagen-header -->
 
-    <div class="caja-curso">
-        <h1>CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos</h1>
-        <p>- Juan De la torre @codigoconjuan</p>
-        <a target="blank" rel="nofollow noopener noreferrer"  href="https://codigoconjuan.com/">Vísita mi sitio Codigo Con Juan</a>
-    </div>
-
-    <div class="contenedor">
-
-        <h2>Primeros Pasos con Media Queries</h2>
-
-        <div class="oferta">
-            <p class="precio">$20 Descuento</p>
-            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+            <div class="texto-header">
+                <p class="tagline-producto">Sonido Profesional</p>
+                <h1 class="nombre-producto degradado-verde">TechPRO</h1>
+                <p class="descripcion-producto">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente dicta doloremque ipsam voluptatibus voluptates incidunt ad id, deserunt
+                saepe sed vel ducimus adipisci! Cumque esse do loremque nam vitae sunt!</p>
+                <p class="precio-producto">Desde <span>$299</span></p>
+            </div>
         </div>
+    </header>
 
-        <h2>Mobile First</h2>
+    <section class="contenedor">
+        <div class="iconos">
+            <div class="icono">
+                <img src="img/icono-sonido.svg" alt="imagen icono">
+                <h3>Gran Sonido</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ullam corporis voluptatem recusandae
+                tempora amet quis impedit iste neque delectus, iusto pariatur explicabo perferendis repellendus,
+                eaque quaerat praesentium commodi quibusdam!</p>
+            </div>
 
-        <div class="oferta">
-            <p class="precio">$20 Descuento</p>
-            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+            <div class="icono">
+                <img src="img/icono-garantia.svg" alt="imagen icono">
+                <h3>Garantia de por vida</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ullam corporis voluptatem recusandae
+                tempora amet quis impedit iste neque delectus, iusto pariatur explicabo perferendis repellendus,
+                eaque quaerat praesentium commodi quibusdam!</p>
+            </div>
+
+            <div class="icono">
+                <img src="img/icono-bateria.svg" alt="imagen icono">
+                <h3>+20 Horas de Bateria</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ullam corporis voluptatem recusandae
+                tempora amet quis impedit iste neque delectus, iusto pariatur explicabo perferendis repellendus,
+                eaque quaerat praesentium commodi quibusdam!</p>
+            </div>
+
         </div>
+    </section>
 
-        <h2>Desktop First</h2>
-
-        <div class="oferta">
-            <p class="precio">$20 Descuento</p>
-            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+    <section class="sobre-tech">
+        <div class="contenedor sobre-tech-grid">
+            <div class="texto-sobre-tech">
+                <h2>Sobre los <span>TechPRO</span> </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quo maiores tempora autem voluptatem nihil
+                repellat porro. Praesentium, minima exercitationem temporibus fugit vitae asperiores laudantium
+                alias adipisci ipsa! Optio, excepturi?</p>
+            </div>
         </div>
+    </section>
 
-        <h2>Media Queries entre 2 tamaños</h2>
-        <div class="oferta">
-            <p class="precio">$20 Descuento</p>
-            <p class="texto">Utiliza el cupón: 20OFF al pagar</p>
+    <main class="contenedor modelos">
+        <h2 class="text-center">Elige tus TechPRO</h2>
+
+        <div class="listado-modelos">
+            <div class="modelo modelo-x">
+                <h3>TechPRO X</h3>
+                <p class="precio">$299</p>
+            </div>
+
+            <div class="modelo modelo-y">
+                <h3>TechPRO Y</h3>
+                <p class="precio">$399</p>
+            </div>
+
+            <div class="modelo modelo-z">
+                <h3>TechPRO Z</h3>
+                <p class="precio">$499</p>
+            </div>
+
         </div>
-
-        <h2>Shorthand para Media Queries</h2>
-
-        <h2>Tamaños estándar</h2>
-
-        <h2>Contenedores Responsive</h2>
-
-        <div class="contenedor-responsive">
-            
-        </div>
-
-        <h2>3 Columnas Responsive Flexbox</h2>
-
-        <div class="tres-columnas-flex">
-            <div class="columna">1</div>
-            <div class="columna">2</div>
-            <div class="columna">3</div>
-        </div>
-
-        <h2>3 Columnas Responsive Grid</h2>
-
-        <div class="tres-columnas-grid">
-            <div class="columna">1</div>
-            <div class="columna">2</div>
-            <div class="columna">3</div>
-        </div>
-
-        <h2>Imágenes Responsive</h2>
-        <!-- <img src="img/imagen.avif" alt="imagen responsive" > -->
-
-        <h2>Formatos Modernos</h2>
-
-        <picture>
-            <source srcset="img/imagen.avif" type="image/avif" />
-            <source srcset="img/imagen.webp">
-            <img loading="lazy" src="jpg" alt="imagen">
-        </picture>
-
-        <h2>Formatos Modernos con SRC SET</h2>
-
-    </div>
+    </main>
 
 </body>
 </html>
