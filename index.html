@@ -4,117 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEM Básicos</title>
+    <title>Nucleus - eWallet </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__contenedor">
+            <div class="header__barra">
+                <div class="header__logo">
+                    <img src="img/logo.svg" alt="logo nucleus">
+                </div>
 
+                <nav class="navegacion">
+                    <a href="#" class="navegacion__link">¿Qué es?</a>
+                    <a href="#" class="navegacion__link">¿Cómo funciona?</a>
+                    <a href="#" class="navegacion__link">Precios</a>
+                    <a href="#" class="navegacion__link">Contratar</a>
+                </nav>
+            </div>
 
-    <div class="caja-curso">
-        <h1>CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos</h1>
-        <p> <a target="blank" rel="nofollow noopener noreferrer"  href="https://twitter.com/codigoconjuan"> - Juan De la torre @codigoconjuan </a> </p>
-        <a target="blank" rel="nofollow noopener noreferrer"  href="https://codigoconjuan.com/">Vísita mi sitio Codigo Con Juan</a>
-    </div>
+            <div class="header__grid">
+                <div class="header__texto">
+                    <h1 class="header__heading">Recibe y realiza pagos en tu celular con nuclues</h1>
+                    <a class="header__boton" href="#">Obtener Cuenta</a>
+                </div>
 
-    <h1>Básicos BEM</h1>
-
-    <div class="contenedor">
-        <div class="productos">
-            <h2 class="productos__heading">Nuestros Productos</h2>
-
-            <div class="productos__grid">
-                <div class="producto">
-                    <img class="producto__imagen" src="img/producto1.jpg" alt="imagen producto">
-                    <div class="producto__contenido">
-                        <h3 class="producto__nombre">Producto 1</h3>
-                        <p class="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum aut
-                        aliquid, quod libero fugiat iste rem quidem fugit laborum vitae nemo labore vel ipsa odio sapiente
-                        doloremque aperiam blanditiis.</p>
-                        <div class="producto__precios">
-                            <p class="producto__precio">$199</p>
-                        </div>
-                        <button class="producto__boton" type="button">Aniadir al carrito</button>
-                    </div>
-                </div><!-- .producto -->
-
-                <div class="producto">
-                    <img class="producto__imagen" src="img/producto2.jpg" alt="imagen producto">
-                    <div class="producto__contenido">
-                        <h3 class="producto__nombre">Producto 2</h3>
-                        <p class="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum aut
-                        aliquid, quod libero fugiat iste rem quidem fugit laborum vitae nemo labore vel ipsa odio sapiente
-                        doloremque aperiam blanditiis.</p>
-                        <div class="producto__precios">
-                            <p class="producto__precio">$199</p>
-                        </div>
-                        <button class="producto__boton" type="button">Aniadir al carrito</button>
-                    </div>
-                </div><!-- .producto -->
-
-                <div class="producto">
-                    <img class="producto__imagen" src="img/producto3.jpg" alt="imagen producto">
-                    <div class="producto__contenido">
-                        <h3 class="producto__nombre">Producto 3</h3>
-                        <p class="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum aut
-                        aliquid, quod libero fugiat iste rem quidem fugit laborum vitae nemo labore vel ipsa odio sapiente
-                        doloremque aperiam blanditiis.</p>
-                        <div class="producto__precios">
-                            <p class="producto__precio">$199</p>
-                        </div>
-                        <button class="producto__boton" type="button">Aniadir al carrito</button>
-                    </div>
-                </div><!-- .producto -->
-
-                <div class="producto">
-                    <img class="producto__imagen" src="img/producto4.jpg" alt="imagen producto">
-                    <div class="producto__contenido">
-                        <h3 class="producto__nombre">Producto 4</h3>
-                        <p class="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum aut
-                        aliquid, quod libero fugiat iste rem quidem fugit laborum vitae nemo labore vel ipsa odio sapiente
-                        doloremque aperiam blanditiis.</p>
-                        <div class="producto__precios">
-                            <p class="producto__precio">$199</p>
-                        </div>
-                        <button class="producto__boton" type="button">Aniadir al carrito</button>
-                    </div>
-                </div><!-- .producto -->
-
-                <div class="producto">
-                    <img class="producto__imagen" src="img/producto5.jpg" alt="imagen producto">
-                    <div class="producto__contenido">
-                        <h3 class="producto__nombre">Producto 5</h3>
-                        <p class="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum aut
-                        aliquid, quod libero fugiat iste rem quidem fugit laborum vitae nemo labore vel ipsa odio sapiente
-                        doloremque aperiam blanditiis.</p>
-                        <div class="producto__precios">
-                            <p class="producto__precio producto__precio--oferta">$199</p>
-                            <p class="producto__precio">$99</p>
-                        </div>
-                        <button class="producto__boton" type="button">Aniadir al carrito</button>
-                    </div>
-                </div><!-- .producto -->
-
-                <div class="producto">
-                    <img class="producto__imagen" src="img/producto6.jpg" alt="imagen producto">
-                    <div class="producto__contenido">
-                        <h3 class="producto__nombre">Producto 6</h3>
-                        <p class="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nostrum aut
-                        aliquid, quod libero fugiat iste rem quidem fugit laborum vitae nemo labore vel ipsa odio sapiente
-                        doloremque aperiam blanditiis.</p>
-                        <div class="producto__precios">
-                            <p class="producto__precio">$199</p>
-                        </div>
-                        <button class="producto__boton" type="button">Aniadir al carrito</button>
-                    </div>
-                </div><!-- .producto -->
-
+                <div class="header__grafico">
+                    <img class="header__imagen" src="img/app_1.svg" alt="imagen nucleus app">
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+    <main class="nucleus">
+        <h2 class="nucleus__heading">¿Qué es?</h2>
+        <div class="nucleus__contenedor">
+            <div class="nucleus__grid">
+                <div class="nucleus imagen">
+                    <img src="img/app_2.svg" alt="app nucleus">
+                </div>
+
+                <div class="listado"
+                    <div class="listado__elemento">
+                        <h2 class="listado__heading">Fácil</h2>
+                        <p class="listado__texto">Crea una cuenta, envía tu documentación y empieza a
+                        utilizar nucleus en un par de horas</p>
+
+                        <div class="listado__elemento">
+                            <h2 class="listado__heading">Seguro</h2>
+                            <p class="listado__texto">Por su tecnología digital nucleus es imposible de 
+                            hackear o robar</p>
+                        </div>
+
+                        <div class="listado__elemento">
+                            <h2 class="listado__heading">Administrable</h2>
+                            <p class="listado__texto">Añade o transfiere fondos a tu banco, añade limites o 
+                            controla tus gastos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     
 </body>
 </html>
