@@ -1,0 +1,25 @@
+{
+  "name": "cafeteria",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS, Gulp, CSS Grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realwillianflecha/Cafeteria.git"
+  },
+  "author": "Willian Dario Flecha Ayala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/realwillianflecha/Cafeteria/issues"
+  },
+  "homepage": "https://github.com/realwillianflecha/Cafeteria#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.80.5"
+  }
+}
