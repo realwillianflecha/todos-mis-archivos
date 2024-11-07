@@ -6,7 +6,7 @@ function css( done ) {
     //pasos: 1 - identificar archivo, 2 - Compilarla, 3 - Guardar el .css
     
     src ('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass({ outputStyle: 'expanded'}) )
         .pipe( dest('build/css') )
 
     done()
