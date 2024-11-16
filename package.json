@@ -22,10 +22,11 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
     "sass": "^1.80.5"
   },
   "browserslist": [
-    "last 1 version"
+    "last 1 version",
     "> 1%"
   ]
 }
