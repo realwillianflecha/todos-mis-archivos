@@ -4,8 +4,6 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const cssnano = require('cssnano');
 
 // Imagenes
 const imagemin = require('gulp-imagemin');
@@ -13,37 +11,33 @@ const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
 function css( done ) {
-    src('src/scss/app.scss')
-        .pipe( sourcemaps.init() )
+    //compilar sass
+    //pasos: 1 - identificar archivo, 2 - Compilarla, 3 - Guardar el .css
+    
+    src ('src/scss/app.scss')
         .pipe( sass() )
-        .pipe( postcss([ autoprefixer(), cssnano() ]) )
-        .pipe( sourcemaps.write('.'))
+        .pipe( postcss([ autoprefixer() ]) )
         .pipe( dest('build/css') )
 
-    done();
+    done()
 }
 
 function imagenes() {
     return src('src/img/**/*')
-        .pipe( imagemin({ optimizationLevel: 3 }) )
-        .pipe( dest('build/img') )
+        .pipe( imagemin({optimizationLevel: 3 }) )
+        .pipe( dest( 'build/img' ) );
 }
 
 function versionWebp() {
-    const opciones = {
-        quality: 50
-    }
     return src('src/img/**/*.{png,jpg}')
-        .pipe( webp( opciones ) )
+        .pipe( webp() )
         .pipe( dest('build/img') )
 }
+
 function versionAvif() {
-    const opciones = {
-        quality: 50
-    }
     return src('src/img/**/*.{png,jpg}')
-        .pipe( avif( opciones ) )
-        .pipe( dest('build/img'))
+        .pipe( avif() )
+        .pipe( dest('build/img') )
 }
 
 function dev() {
@@ -51,13 +45,12 @@ function dev() {
     watch( 'src/img/**/*', imagenes );
 }
 
-
 exports.css = css;
 exports.dev = dev;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = series( imagenes, versionWebp, versionAvif, css, dev  );
+exports.default = series( imagenes, versionWebp, versionAvif, css, dev );
 
 // series - Se inicia una tarea, y hasta que finaliza, inicia la siguiente
-// parallel - Todas inician al mismo tiempo
+//parallel - Todas iniciain al mismo tiempo
