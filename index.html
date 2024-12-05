@@ -1,193 +1,134 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce - Home</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <title>TechPRO Audifonos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/app.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <div class="imagen-header">
+                <picture>
+                    <source 
+                        sizes="1920w"
+                        srcset="img/header.avif 1920w" 
+                        type="image/avif">
+                    <source 
+                        sizes="1920w" 
+                        srcset="img/header.webp 1920w" 
+                        type="image/webp">
+                    <img loading="lazy" decoding="async" src="img/header.png" 
+                    lazyalt="imagen" width="1000" height="500">
+                </picture>
+            </div> <!-- .imagen-header -->
 
-    <header>
-        <h1 class="nombre-sitio"> Tienda <span> Muebles </span></h1>
+            <div class="texto-header">
+                <p class="tagline-producto">Sonido Profesional</p>
+                <h1 class="nombre-producto degradado-verde">TechPRO</h1>
+                <p class="descripcion-producto">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente dicta doloremque ipsam voluptatibus voluptates incidunt ad id, deserunt
+                saepe sed vel ducimus adipisci! Cumque esse do loremque nam vitae sunt!</p>
+                <p class="precio-producto">Desde <span>$299</span></p>
+            </div>
+        </div>
     </header>
 
-    <div class="contenedor-navegacion">
-        <nav class="nav-principal contenedor">
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="blog.html">Blog</a>
-            <a href="galeria.html">Galeria</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>  
-    </div>
-    
-    
-    
-    <div class="hero"></div>
-
-    <section class="contenedor categorias">
-        <h2 class="text-center">Categoria de Productos</h2>
-        
-        <div class="listado-categorias">
-            <div class="categorias">
-                <img src="img/categoria1.jpg" alt="Imagen Categoria"/>
-                <a href="">Oficina</a>
+    <section class="contenedor">
+        <div class="iconos">
+            <div class="icono">
+                <img src="img/icono-sonido.svg" alt="imagen icono">
+                <h3>Gran Sonido</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ullam corporis voluptatem recusandae
+                tempora amet quis impedit iste neque delectus, iusto pariatur explicabo perferendis repellendus,
+                eaque quaerat praesentium commodi quibusdam!</p>
             </div>
 
-            <div class="categorias">
-                <img src="img/categoria2.jpg" alt="Imagen Categoria"/>
-                <a href="">Hogar</a>
+            <div class="icono">
+                <img src="img/icono-garantia.svg" alt="imagen icono">
+                <h3>Garantia de por vida</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ullam corporis voluptatem recusandae
+                tempora amet quis impedit iste neque delectus, iusto pariatur explicabo perferendis repellendus,
+                eaque quaerat praesentium commodi quibusdam!</p>
             </div>
 
-            <div class="categorias">
-                <img src="img/categoria3.jpg" alt="Imagen Categoria"/>
-                <a href="">Cocina</a>
+            <div class="icono">
+                <img src="img/icono-bateria.svg" alt="imagen icono">
+                <h3>+20 Horas de Bateria</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ullam corporis voluptatem recusandae
+                tempora amet quis impedit iste neque delectus, iusto pariatur explicabo perferendis repellendus,
+                eaque quaerat praesentium commodi quibusdam!</p>
             </div>
+
         </div>
-
     </section>
-        
 
-    <section class="sobre-nosotros">
-        <div class="contenedor sobre-nosotros-grid">
-            <div class="texto-nosotros">
-                <h2>Sobre Nosotros</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eligendi numquam 
-                sint expedita ipsam ex, voluptas ullam ad. Vero rem iure aperiam incidunt dolorum 
-                exercitationem excepturi fuga ex quia dolorem.</p>
+    <section class="sobre-tech">
+        <div class="contenedor sobre-tech-grid">
+            <div class="texto-sobre-tech">
+                <h2>Sobre los <span>TechPRO</span> </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo quo maiores tempora autem voluptatem nihil
+                repellat porro. Praesentium, minima exercitationem temporibus fugit vitae asperiores laudantium
+                alias adipisci ipsa! Optio, excepturi?</p>
             </div>
         </div>
     </section>
 
+    <main class="contenedor modelos">
+        <h2 class="text-center degradado-verde header-modelos">Elige tus TechPRO</h2>
 
-    <main class="contenido-principal contenedor">
-        <h2 class="text-center">Nuestros Productos</h2>
-        
-        <div class="listado-productos">
-            <div class="producto">
-                <img src="img/producto1.jpg" alt="Imagen Producto" />
+        <div class="listado-modelos">
+            <div class="modelo modelo-x">
+                <h3>TechPRO X</h3>
+                <p class="precio">$299</p>
+            </div>
 
-                <div class="texto-producto">
-                    <h3>Producto 1</h3>
-                    <p>Proin condimentum sodales risus ut aliquet. Nunc eu neque quis
-                    sapien feugiat posuere sed nec mauris.</p>
-                    <p class="precio">$1,000,000.00</p>
-                    <a class="btn" href="#">Agregar al carrito</a>
-                </div> <!-- Info Producto -->
-            </div> <!-- Producto-->
+            <div class="modelo modelo-y">
+                <h3>TechPRO Y</h3>
+                <p class="precio">$399</p>
+            </div>
 
-            <div class="producto">
-                <img src="img/producto2.jpg" alt="Imagen Producto" />
+            <div class="modelo modelo-z">
+                <h3>TechPRO Z</h3>
+                <p class="precio">$499</p>
+            </div>
 
-                <div class="texto-producto">
-                    <h3>Producto 2</h3>
-                    <p>Proin condimentum sodales risus ut aliquet. Nunc eu neque quis
-                    sapien feugiat posuere sed nec mauris.</p>
-                    <p class="precio">$1,000,000.00</p>
-                    <a class="btn" href="#">Agregar al carrito</a>
-                </div> <!-- Info Producto -->
-            </div> <!-- Producto-->
-
-            <div class="producto">
-                <img src="img/producto3.jpg" alt="Imagen Producto" />
-
-                <div class="texto-producto">
-                    <h3>Producto 3</h3>
-                    <p>Proin condimentum sodales risus ut aliquet. Nunc eu neque quis
-                    sapien feugiat posuere sed nec mauris.</p>
-                    <p class="precio">$1,000,000.00</p>
-                    <a class="btn" href="#">Agregar al carrito</a>
-                </div> <!-- Info Producto -->
-            </div> <!-- Producto-->
-
-            <div class="producto">
-                <img src="img/producto4.jpg" alt="Imagen Producto" />
-
-                <div class="texto-producto">
-                    <h3>Producto 4</h3>
-                    <p>Proin condimentum sodales risus ut aliquet. Nunc eu neque quis
-                    sapien feugiat posuere sed nec mauris.</p>
-                    <p class="precio">$1,000,000.00</p>
-                    <a class="btn" href="#">Agregar al carrito</a>
-                </div> <!-- Info Producto -->
-            </div> <!-- Producto-->
-
-            <div class="producto">
-                <img src="img/producto5.jpg" alt="Imagen Producto" />
-
-                <div class="texto-producto">
-                    <h3>Producto 5</h3>
-                    <p>Proin condimentum sodales risus ut aliquet. Nunc eu neque quis
-                    sapien feugiat posuere sed nec mauris.</p>
-                    <p class="precio">$1,000,000.00</p>
-                    <a class="btn" href="#">Agregar al carrito</a>
-                </div> <!-- Info Producto -->
-            </div> <!-- Producto-->
-
-            <div class="producto">
-                <img src="img/producto6.jpg" alt="Imagen Producto" />
-
-                <div class="texto-producto">
-                    <h3>Producto 6</h3>
-                    <p>Proin condimentum sodales risus ut aliquet. Nunc eu neque quis
-                    sapien feugiat posuere sed nec mauris.</p>
-                    <p class="precio">$1,000,000.00</p>
-                    <a class="btn" href="#">Agregar al carrito</a>
-                </div> <!-- Info Producto -->
-            </div> <!-- Producto-->
-
-        </div> <!-- Fin de Listado de Productos -->
+        </div>
     </main>
-    
-    
-    
-    
 
-    <footer>
-        <div class="contenedor-nav-footer">
-            <div class="listado-footer contenedor">
-                <div>
-                    <h3>Categorias</h3>
-                    <nav class="enlace-footer navegacion">
-                        <a href="#">Cocina</a>
-                        <a href="#">Oficina</a>
-                        <a href="#">Jardin</a>
-                        <a href="#">Cochera</a>
-                        <a href="#">Dormitorios</a>
-                    </nav>
-                </div>
+    <section class="newsletter">
+        <div class="contenido-newsletter contenedor">
+            <div class="texto-newsletter">
+                <h2>Recibe Actualizaciones</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nisi blanditiis voluptatem minima necessitatibus
+                ex quaerat nemo ea hic nam, molestiae consequuntur, sunt asperiores sit dolore voluptatibus,
+                qui nulla vero.</p>
 
-                <div>
-                    <h3>Sobre Nosotros</h3>
-                    <nav class="enlace-footer navegacion">
-                        <a href="#">Nuestra Historia</a>
-                        <a href="#">Mision, Vision y Valores</a>
-                        <a href="#">Carreras</a>
-                        <a href="#">Politica de Privacidad</a>
-                        <a href="#">Terminos del Servicio</a>
-                    </nav>
-                </div>
+                <form class="formulario">
+                    <div class="input">
+                        <input type="text" placeholder="Tu Email" >
+                    </div>
 
-                <div>
-                    <h3>Soporte</h3>
-                    <nav class="enlace-footer">
-                        <a href="#">Preguntas Frecuentes</a>
-                        <a href="#">Ayuda en Linea</a>
-                        <a href="#">Confianza y Seguridad</a>
-                    </nav>
-                </div>
+                    <input type="submit" value="Inscribirme">
+                </form>
             </div>
         </div>
+    </section>
 
-        <p class="text-align-footer">Todos los derechos reservados, TiendaMuebles</p>
+    <footer class="footer">
+        <p>Todos los derechos reservados</p>
     </footer>
 
+
+    <script src="js/imagenes.js"></script>
 </body>
 </html>
