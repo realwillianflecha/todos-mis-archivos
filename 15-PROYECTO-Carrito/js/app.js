@@ -9,6 +9,9 @@ cargarEventListeners();
 function cargarEventListeners() {
     // Cuando agregas un curso presionando "Agregar al Carrito"
     listaCursos.addEventListener('click', agregarCurso);
+
+    // Elimina cursos del carrito
+    carrito.addEventListener('click', eliminarCurso)
 }
 
 
@@ -24,6 +27,14 @@ function agregarCurso(e) {
    
 }
 
+// Elimina un curso del carrito
+function eliminarCurso(e) {
+    console.log(e.target.classList);
+    if(e.target.classList.contains('borrar-curso')) {
+        const cursoId = e.target.getAttribute('data-id');
+    }
+}
+
 // Lee el contenido del HTML al que le demos click y extrae la informacion del curso
 function LeerDatosCurso(curso) {
     // console.log(curso);
@@ -36,9 +47,27 @@ function LeerDatosCurso(curso) {
         id: curso.querySelector('a').getAttribute('data-id'),
         cantidad: 1
     }
+
+    // Revisa si un elemento ya existe en el carrito
+    const existe = articulosCarrito.some( curso => curso.id === infoCurso.id );
+    if(existe) {
+        // Actualizamos la cantidad
+        const cursos = articulosCarrito.map( curso => {
+            if(curso.id === infoCurso.id) {
+                curso.cantidad++
+                return curso; // retorna el objeto actualizado
+            } else {
+                return curso; // retorna los objetos que no son los duplicados
+            }
+        } )
+        articulosCarrito = [...cursos];
+    } else {
+        // Agrega elementos el arreglo de carrito
+        articulosCarrito = [...articulosCarrito, infoCurso];
+    }
+
     
-    // Agrega elementos el arreglo de carrito
-    articulosCarrito = [...articulosCarrito, infoCurso];
+   
 
     console.log(articulosCarrito);
 
