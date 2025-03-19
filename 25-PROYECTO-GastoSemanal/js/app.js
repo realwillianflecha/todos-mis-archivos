@@ -21,7 +21,9 @@ class Presupuesto {
 }
 
 class UI {
-
+    insertarPresupuesto( cantidad ) {
+        console.log(cantidad);
+    }
 }
 
 // Instanciar
@@ -41,5 +43,8 @@ function preguntarPresupuesto() {
 
     // Presupuesto valido
     presupuesto = new Presupuesto(presupuestoUsuario);
+    console.log(presupuesto);
 
+
+    ui.insertarPresupuesto(presupuesto);
 }
