@@ -25,6 +25,9 @@ window.onload = () => {
     eventListeners();
 
     crearDB();
+
+    // Mostrar citas al cargar (Pero IndexedDB ya esta listo)
+    ui.imprimirCitas();
 }
 
 
@@ -109,8 +112,12 @@ class UI {
         // Leer el contenido de la base de datos
         const objectStore = DB.transaction('citas').objectStore('citas');
 
+        const fnTextoHeading = this.textoHeading;
+
         const total = objectStore.count();
-        console.log(total);
+        total.onsucces() = function() {
+            fnTextoHeading(total.result);
+        }
 
         objectStore.openCursor().onsuccess = function(e) {
             
@@ -151,6 +158,7 @@ class UI {
 
                 // Añade un botón de editar...
                 const btnEditar = document.createElement('button');
+                const cita = cursor.value;
                 btnEditar.onclick = () => cargarEdicion(cita);
 
                 btnEditar.classList.add('btn', 'btn-info');
@@ -175,8 +183,8 @@ class UI {
         }
    }
 
-   textoHeading(citas) {
-        if(citas.length > 0 ) {
+   textoHeading(resultado) {
+        if(resultado > 0 ) {
             heading.textContent = 'Administra tus Citas '
         } else {
             heading.textContent = 'No hay Citas, comienza creando una'
@@ -210,11 +218,25 @@ function nuevaCita(e) {
         // Estamos editando
         administrarCitas.editarCita( {...citaObj} );
 
-        ui.imprimirAlerta('Guardado Correctamente');
+        // Edita en indexedDB
+        const transaction = DB.transaction(['citas'], 'readwrite');
+        const objectStore = transaction.objectStore('citas');
 
-        formulario.querySelector('button[type="submit"]').textContent = 'Crear Cita';
+        objectStore.put(citaObj);
+        
+        transaction.oncomplete = () => {
+            ui.imprimirAlerta('Guardado Correctamente');
 
-        editando = false;
+            formulario.querySelector('button[type="submit"]').textContent = 'Crear Cita';
+
+            editando = false;
+        }
+
+        transaction.onerror = () => {
+            console.log('Hubo un error'); 
+        }
+
+        
 
     } else {
         // Nuevo Registro
