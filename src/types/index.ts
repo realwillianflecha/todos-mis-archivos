@@ -1,18 +1,9 @@
-export type Guitar = {
-    id : number;
-    name : string
-    image : string
-    description : string
+export type MenuItem = {
+    id : number,
+    name : string,
     price : number
 }
 
-export type CartItem = Guitar & {
-    quantity: number
+export type OrderItem = MenuItem & {
+    quantity : number
 }
-// export type CartItem = Pick<Guitar, 'id' | 'name' | 'price' > & {
-//     quantity : number
-// }
-
-// export type CartItem = Omit<Guitar, 'id' | 'name' | 'price' > & {
-//     quantity : number
-// }

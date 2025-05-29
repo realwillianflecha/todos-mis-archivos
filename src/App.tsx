@@ -1,45 +1,40 @@
-import Header from "./components/Header"
-import Guitar from "./components/Guitar"
-import { useCart } from './hooks/useCart'
+import { menuItems } from "./data/db"
+import MenuItem from "./components/MenuItem"
+import useOrder from "./hooks/useOrder"
 
 function App() {
 
-  const { data, cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal } = useCart()
+  const { addItem } = useOrder()
 
   return (
-    <> 
+    <>
+        <header className="bg-teal-400 py-5">
+          <h1 className="text-center text-4xl font-black">Calculadora de Propinas y Consumo</h1>
+        </header>
 
-    <Header 
-      cart={cart}
-      removeFromCart={removeFromCart}
-      increaseQuantity={increaseQuantity}
-      decreaseQuantity={decreaseQuantity}
-      clearCart={clearCart}
-      isEmpty={isEmpty}
-      cartTotal={cartTotal}
-    />
-    
-    <main className="container-xl mt-5">
-        <h2 className="text-center">Nuestra Colección</h2>
+        <main className="max-w-7xl mx-auto py-20 grid md:grid-cols-2">
+          <div className="p-5">
+            <h2 className="text-4xl font-black">Menu</h2>
 
-        <div className="row mt-5">
-            {data.map((guitar) => (
-                <Guitar
-                  key={guitar.id}
-                  guitar={guitar}
-                  addToCart={addToCart}
-                />  
-              )
-            )}
-        </div>
-    </main>
+            <div className="space-y-3 mt-10">
+                {menuItems.map(item => (
+                  <MenuItem
+                    key={item.id}
+                    item={item}
+                    addItem={addItem}
+                  />
+                ))}
+            </div>
+
+          </div>
+
+          <div>
+            <h2>Consumo</h2>
 
 
-    <footer className="bg-dark mt-5 py-5">
-        <div className="container-xl">
-            <p className="text-white text-center fs-4 mt-4 m-md-0">GuitarLA - Todos los derechos Reservados</p>
-        </div>
-    </footer>
+
+          </div>
+        </main>
 
     </>
   )
